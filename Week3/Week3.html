@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campus Notices Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Juan G. Macaraeg National High School</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#notices">Notices</a></li>
+                <li><a href="#deadlines">Deadlines</a></li>
+                <li><a href="#submit">Submit a Notice</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="notices">
+            <h2>Latest Campus Notices</h2>
+
+            <div class="notices">
+
+                <article class="notice">
+                    <span class="category">Academic</span>
+                    <h3>Library Hours Extended</h3>
+                    <p class="meta">October 12, 2026</p>
+                    <p>The campus library will extend its operating hours to give students more time to study and complete their academic requirements.</p>
+                </article>
+
+                <article class="notice">
+                    <span class="category">Event</span>
+                    <h3>Campus Clean-Up Drive</h3>
+                    <p class="meta">November 25, 2026</p>
+                    <p>Students are encouraged to participate in the campus clean-up drive and help maintain a clean and healthy school environment.</p>
+                </article>
+
+                <article class="notice">
+                    <span class="category">General</span>
+                    <h3>Student Organization Meeting</h3>
+                    <p class="meta">November 18, 2026</p>
+                    <p>All student organization officers are invited to attend the scheduled meeting to discuss upcoming campus activities.</p>
+                </article>
+
+                <article class="notice">
+                    <span class="category">Academic</span>
+                    <h3>Project Proposal Submission</h3>
+                    <p class="meta">November 28, 2026</p>
+                    <p>Students must submit their project proposals to their respective instructors before the announced deadline.</p>
+                </article>
+
+                <article class="notice">
+                    <span class="category">Event</span>
+                    <h3>Programming Competition</h3>
+                    <p class="meta">November 20, 2026</p>
+                    <p>Interested students are invited to register for the campus programming competition and demonstrate their coding skills.</p>
+                </article>
+
+                <article class="notice">
+                    <span class="category">General</span>
+                    <h3>Campus Announcement</h3>
+                    <p class="meta">November 26, 2026</p>
+                    <p>Students are reminded to check the official campus announcements regularly for important updates and activities.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="submit">
+            <h2>Post a Notice</h2>
+
+            <form>
+                <label for="title">Notice Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter notice title">
+
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                    <option value="academic">Academic</option>
+                    <option value="event">Event</option>
+                    <option value="general">General</option>
+                </select>
+
+                <label for="message">Notice Details</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your announcement"></textarea>
+
+                <button type="submit">Submit Notice</button>
+            </form>
+        </section>
+    </main>
+
+    <aside id="deadlines">
+        <h2>Important Deadlines</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Enrolment Ends</td>
+                    <td>Nov. 20, 2026</td>
+                </tr>
+                <tr>
+                    <td>Programming Contest Registration</td>
+                    <td>Nov. 25, 2026</td>
+                </tr>
+                <tr>
+                    <td>Project Proposal Submission</td>
+                    <td>Nov. 28, 2026</td>
+                </tr>
+                <tr>
+                    <td>Campus Clean-Up Drive</td>
+                    <td>Nov. 30, 2026</td>
+                </tr>
+            </tbody>
+        </table>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 JGMNHS | Campus Notices Board</p>
+    </footer>
+
+</body>
+</html>

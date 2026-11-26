@@ -1,0 +1,265 @@
+
+:root {
+    --brand: #c62828;
+    --brand-light: #ffebee;
+    --background: #f8f8f8;
+    --surface: #ffffff;
+    --text: #222222;
+    --muted: #666666;
+    --border: #e0d5d5;
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 24px;
+    padding: 20px 16px;
+    background: var(--brand);
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+h2 {
+    color: var(--brand);
+    margin-top: 0;
+}
+
+/* Notices Grid */
+.notices {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.notice {
+    min-width: 0;
+    margin-bottom: 0;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.notice h3 {
+    margin: 12px 0 4px;
+    color: var(--brand);
+}
+
+.notice p {
+    overflow-wrap: anywhere;
+}
+
+.category {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--brand-light);
+    color: var(--brand);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.meta {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Submit Notice Form */
+#submit {
+    margin-top: 32px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+}
+
+button {
+    padding: 12px 18px;
+    background: var(--brand);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a51f1f;
+}
+
+/* Deadlines Sidebar */
+aside {
+    width: 100%;
+    padding: 20px 16px;
+    background: var(--surface);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid var(--border);
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+th {
+    background: var(--brand-light);
+    color: var(--brand);
+}
+
+/* Footer */
+footer {
+    padding: 18px 16px;
+    background: var(--brand);
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Tablet: 600px and above */
+@media (min-width: 600px) {
+    .notices {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        padding: 24px;
+    }
+}
+
+/* Desktop: 960px and above */
+@media (min-width: 960px) {
+    body {
+        grid-template-columns: minmax(0, 1fr) 300px;
+        grid-template-areas:
+            "header header"
+            "main aside"
+            "footer footer";
+        gap: 16px;
+    }
+
+    header {
+        grid-area: header;
+        padding: 24px 32px;
+    }
+
+    main {
+        grid-area: main;
+        min-width: 0;
+    }
+
+    aside {
+        grid-area: aside;
+        align-self: start;
+        margin-top: 24px;
+        margin-right: 16px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    .notices {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
